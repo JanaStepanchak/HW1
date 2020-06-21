@@ -28,17 +28,16 @@ code {
   "list button";
 
   grid-auto-rows:  1fr;
-  grid-auto-columns: 3fr 1fr;
+  grid-auto-columns:  2fr 1fr;
   grid-gap: 5px; 
-}
-
-
-.list{
-  grid-area: list;
 }
 
 .button{
   position: center;
   grid-area: button;
 
+}
+
+.list{
+  grid-area: list;
 }

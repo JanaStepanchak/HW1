@@ -32,16 +32,23 @@ class App extends Component {
   handleChange = (event) => {
     const { contacts } = this.state;
     const query = event.target.value.toLowerCase();
-  /*  const results = contacts.filter((user) =>(user.contact.name.toLowerCase().indexOf(query) > -1)); */
-    const results = contacts.filter((user) =>{
+/* const results = contacts.filter((user) =>(user.contact.name.toLowerCase().indexOf(query) > -1)); */
+
+  const results = contacts.filter((user) => {
+    let cUser ="";                 
+      for (let key in user.contact) { 
+         cUser = cUser +  user.contact[key];          
+      }
+      return (cUser.toLowerCase().indexOf(query)>=0);                         
+    });
+
+ /* const results = contacts.filter((user) =>{
     return( user.contact.address.toLowerCase().indexOf(query) !== -1    ||
             user.contact.company.toLowerCase().indexOf(query) !== -1 ||
             user.contact.email.toLowerCase().indexOf(query) !== -1    ||
-            user.contact.name.toLowerCase().indexOf(query) !== -1  )}
-    );
-    
-    
-    console.log('[query]', results);
+            user.contact.name.toLowerCase().indexOf(query) !== -1  )}*/
+        //  );
+ //   console.log('[query]', results);
     this.setState({
       filter: results,
       query: event.target.value

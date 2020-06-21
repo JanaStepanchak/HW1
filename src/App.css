@@ -13,20 +13,3 @@
   grid-auto-columns: 6fr, 1fr;
   grid-gap: 10px;
 }
-
-.header{
-  grid-area: header;
-  background-color: #ff0;
-
-}
-
-.content{
-  grid-area: content;
-  background-color: #0f0;
-}
-
-.button{
-  grid-area: button;
-  background-color: #f00;
-}
- 

@@ -8,17 +8,24 @@ class ListСontacts extends Component {
         const { arriver, contact } = user;
 
         return ( 
-            <  div className = 'content'>
-                <div className = 'list'>
-                    <h4>{contact.name}</h4>
-                    <div>works in the company {contact.company}</div>                   
-                    <div>contacts {contact.phone}</div>
-                    <div>contacts {contact.email}</div>
-                    <div>contacts {contact.address}</div>
-                </div>
+            <  div className = 'contentAll'>
+               
+                    <h4  className = 'name'>{contact.name}</h4>
+                    < div className = 'content'>
+                    < div className = 'list'>
+
+                    <div className = 'title'>works in the company : {contact.company}</div>                   
+                    <div className = 'title'>phone  : {contact.phone}</div>
+                    <div className = 'title'>email  :  {contact.email}</div>
+                    <div className = 'title'>address  :  {contact.address}</div>
+                    </ div>
+
+                    
                 <div className = 'button'>
                     <button onClick={changer( contact.index )}    className = {arriver ? "green" : "red"}>{arriver ? "Arrived" : "Not Arrived"}</button>
-                </ div>
+                
+                </div>
+                </div>
             </ div>
         )
     }
